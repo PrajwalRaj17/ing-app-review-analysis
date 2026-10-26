@@ -28,13 +28,12 @@
   mostly driven by the missing running balance.
 - Navigation complaints are about 2.5× more common in the new app.
 
-### Finding 5: Crashes are NOT the main problem
-- Crashes & bugs: 8.4% (new) vs 10.3% (original)
-- Crash complaints are slightly LESS common in the new app.
-- So the new app's low rating isn't mainly about stability. Combined with
-  "no version improved the rating" (Finding 3), this suggests the problem is
-  design and missing features, not bugs. Fixing bugs alone is unlikely to
-  raise the rating much.
+### Finding 5 (revised): Reliability is also a problem
+- Crashes & errors: 15.8% (new) vs 12.6% (original)
+- Original keywords missed "something went wrong" / "error" messages;
+  BERTopic revealed this, and the updated keywords flipped the result.
+- So what: missing features are the biggest complaint, but ING should
+  also fix the error messages, since crashes are linked to churn.
 
 ### Finding 6: Login problems are long-standing, not caused by the new app
 - Login problems: 11.8% (new) vs 11.3% (original)
@@ -100,3 +99,21 @@
 - Reply rates measured on Google Play only (Apple's feed has no developer replies)
 - VPN theme dropped: too few mentions (0.1%)
 - Independent project using public data; not affiliated with ING
+
+  ### Finding 9: BERTopic confirmed themes and found new ones
+- Ran on 2,016 negative new-app reviews; 21 topics found
+- Confirmed: forced migration, prefer old app, running balance,
+  balance preview, switching accounts, churn
+- New themes keywords missed: account nicknames, 5-digit PIN,
+  "something went wrong" errors, payee bugs
+- 41% of reviews were outliers (too short or mixed), so topic counts
+  are lower bounds
+
+| Theme | Accuracy | Fix made |
+|---|---|---|
+| Prefer old app | 10/10 | |
+| Churn intent | 8/10 | removed "moving to" |
+| Transactions & balance | 8/10 | |
+| Design & navigation | 7/10 | added word boundaries, as "ui" matched inside "quick" |
+| Account names | 10/10 | |
+| PIN change (5 digits) | 4/10 → 10/10 | "pin" matched card PINs, login and crashes; narrowed to "5 digit" phrases |

@@ -4,7 +4,7 @@ import pandas as pd
 df = pd.read_csv("data/ing_reviews_clean.csv")
 
 THEMES = {
-    "Crashes & bugs": ["crash", "crashing", "bug", "freez", "glitch", "not loading", "issues"],
+    "Crashes & bugs": ["crash", "crashing", "bug", "freez", "glitch", "not loading", "issues","error", "went wrong", "try again later", "didn't work", "won't open", "doesn't open"],
     "Design & navigation": ["ux", "ui", "navigate", "navigation", "confusing", "can't find",
                             "cannot find", "hard to find", "layout", "cluttered", "messy"],
     "Login problems": ["login", "log in", "sign in", "logged out", "face id", "fingerprint",
@@ -16,14 +16,18 @@ THEMES = {
                      "closing my account", "leave ing", "leaving ing", "move to another bank",
                      "find another bank", "moving my money"],
     "Access blocked (VPN)": ["vpn"],
+
 }   # ← THEMES ends here
 
 FEATURES = {
     "No running balance": ["running balance", "running total"],
     "Balance preview removed": ["without logging in", "before logging in", "preview", "quick balance"],
     "Switching accounts": ["switch between accounts", "switch accounts", "between accounts"],
-    "Paying new payees": ["new payee", "pay someone new", "address book", "add a payee"],
+    "Paying new payees": ["new payee", "pay someone new", "address book", "add a payee","payee","decimal"],
     "Forced migration": ["forced", "force us", "forcing"],
+    "Account Name":["nickname", "rename", "account names"],
+    "PIN change": ["5 digit", "5-digit", "five digit", "5 number", "five number"],
+
 }   
 ALL_TAGS = {**THEMES, **FEATURES}    # merge both dictionaries into one
 
