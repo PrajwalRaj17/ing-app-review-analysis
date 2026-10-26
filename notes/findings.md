@@ -13,3 +13,7 @@
 - Most complain about login page and they cannot the display the transactions properly
 - Some people are comfortable with the old app and also declared they will be switching differents banks 
 - Very minor people were ok with the new version but still they would prefer the old one
+## Finding 5 :
+- From Feb 2026, review volume jumped (8 in Jan → 122 in Feb → 306 in Mar), suggesting a wide rollout. The new app’s rating then stayed flat at ~1.35–1.50 every month and did not improve.
+- In 2026, the original app averaged 0.7–0.8 stars higher than the new app on both stores (App Store 1.94 vs 1.25; Google Play 2.26 vs 1.48).
+
