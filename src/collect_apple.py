@@ -3,9 +3,9 @@ import requests
 import pandas as pd
 
 # ----- Settings -----
-APP_ID = "427100193"
-APP_NAME = "ING Australia Banking"
-OUTPUT_FILE = "data/ing_reviews_apple.csv"
+APP_ID = "6503263049"
+APP_NAME = "Do your thing - ING Banking"
+OUTPUT_FILE = "data/ing_reviews_apple_new.csv"
 
 all_reviews = []
 print("Collecting:", APP_ID, "->", OUTPUT_FILE)
