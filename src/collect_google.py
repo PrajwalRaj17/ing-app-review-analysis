@@ -3,9 +3,9 @@ import pandas as pd
 from google_play_scraper import reviews, Sort
 
 # ----- Settings: change these to collect a different app -----
-APP_ID = "au.com.ing.banking"
-APP_NAME = "Do your thing - ING Banking"
-OUTPUT_FILE = "data/ing_reviews_google_new.csv"
+APP_ID = "au.com.ingdirect.android"
+APP_NAME = "ING Australia Banking"
+OUTPUT_FILE = "data/ing_reviews_google.csv"
 
 all_reviews = []      # empty list to collect everything
 token = None          # no token yet for the first call
