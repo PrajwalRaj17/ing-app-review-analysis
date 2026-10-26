@@ -10,7 +10,7 @@ OUTPUT_FILE = "data/ing_reviews_apple_new.csv"
 all_reviews = []
 print("Collecting:", APP_ID, "->", OUTPUT_FILE)
 
-for page in range(1, 11):                   # pages 1 to 10 (11 is not included)
+for page in range(1, 11):                   # pages 1 to 10
     url = f"https://itunes.apple.com/au/rss/customerreviews/page={page}/id={APP_ID}/sortby=mostrecent/json"
     response = requests.get(url, timeout=20)
 
@@ -34,9 +34,14 @@ for page in range(1, 11):                   # pages 1 to 10 (11 is not included)
     print("Page", page, "- collected so far:", len(all_reviews))
     time.sleep(1)
 
+# Safety check: runs once, after the loop
+if len(all_reviews) == 0:
+    print("No reviews collected - not saving, so existing data is kept.")
+    exit()
+
 df = pd.DataFrame(all_reviews)
 df["app"] = APP_NAME
-df["store"] = "applestore"                        # match the style of "google_play"
+df["store"] = "app_store"
 
 df.to_csv(OUTPUT_FILE, index=False)
 

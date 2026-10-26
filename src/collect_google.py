@@ -33,7 +33,9 @@ while len(all_reviews) < 3000:          # target number of reviews
     time.sleep(1)
 
 print("Total:", len(all_reviews))
-
+if len(all_reviews) == 0:
+    print("No reviews collected - not saving, so existing data is kept.")
+    exit()
 # Turn the list of dictionaries into a table
 df = pd.DataFrame(all_reviews)
 
