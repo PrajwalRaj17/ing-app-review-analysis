@@ -117,3 +117,17 @@
 | Design & navigation | 7/10 | added word boundaries, as "ui" matched inside "quick" |
 | Account names | 10/10 | |
 | PIN change (5 digits) | 4/10 → 10/10 | "pin" matched card PINs, login and crashes; narrowed to "5 digit" phrases |
+
+## Top 5 findings
+1. **Same-period gap:** In 2026, the new app was rated 0.7–0.8 stars lower
+   than the original on both stores (App Store 1.25 vs 1.94; Google Play 1.48 vs 2.26).
+2. **No recovery:** Since the wide rollout in Feb 2026, the new app's monthly
+   rating stayed around 1.4 for eight months, and no app version averaged above 1.8.
+3. **Customers want the old app back:** 43.7% of new app reviews say the old
+   app was better, vs 3.7% for the original.
+4. **Specific, fixable features:** Compared with the original app, complaints are far
+   more common about account nicknames (12.5×), the 5-digit PIN (10×), switching
+   between accounts (8.7×) and the missing running balance (6.6×).
+5. **What drives churn:** 3.9% of new app reviews mention leaving (vs 2.1%).
+   Feeling forced to migrate is ~3× more common among these reviews, and
+   errors ("something went wrong") are higher in the new app (15.8% vs 12.6%).
