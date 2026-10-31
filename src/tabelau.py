@@ -18,6 +18,8 @@ tag_columns = ["Prefer old app", "Transactions & balance", "Crashes & bugs",
                "No running balance", "Balance preview removed", "PIN change"]   # your PIN column name
 df[tag_columns] = df[tag_columns].astype(int)
 
+df["date"] = pd.to_datetime(df["date"], utc=True).dt.strftime("%Y-%m-%d")
+
 # Keep only what the dashboard needs
 keep = ["review_id", "text", "rating", "date", "month", "app_short", "store",
         "sentiment", "app_version"] + tag_columns
